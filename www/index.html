@@ -39,6 +39,9 @@
   nav button i{display:block;font-size:20px;font-style:normal;margin-bottom:3px}
   .note{color:var(--dim);font-size:13px;line-height:1.55}
   a{color:var(--gold)}
+  .card{cursor:pointer;-webkit-tap-highlight-color:rgba(255,217,77,.25)}
+  .btn{text-decoration:none}
+  .bell.on{background:var(--gold);color:#111;border-radius:50%;padding:6px}
 </style>
 </head>
 <body>
@@ -56,11 +59,11 @@
       <div class="k">LATEST PREMIERE · @vertangetv</div>
       <h2>YORUBA PROVERBS — Ep. 1: The Tree That Will Not Fall</h2>
       <p>Baba Abati, the blind storyteller of the iroko tree, teaches the young ones: grow deep before you grow tall.</p>
-      <button class="btn">▶ Watch now</button>
+      <a class="btn" href="https://vertangetv.com">▶ Watch now</a>
     </div>
     <h3 class="sec">THE NETWORK</h3>
     <div class="grid">
-      <div class="card"><div class="t">TOP 10 — Nigeria · USA · UK</div><div class="s">ERIN &amp; XHANGI count down the real charts.</div><span class="tag">FRIDAYS</span></div>
+      <div class="card"><div class="t">TOP 10 — Nigeria · USA</div><div class="s">ERIN &amp; XHANGI count down the real charts.</div><span class="tag">FRIDAYS</span></div>
       <div class="card"><div class="t">KOKO</div><div class="s">Football reviews, UCL nights, Updates &amp; Rumors.</div><span class="tag">ALL WEEK</span></div>
       <div class="card"><div class="t">THE BIBLE STORIES</div><div class="s">Cinema tellings, one story, one lesson.</div><span class="tag">WEDNESDAYS</span></div>
       <div class="card"><div class="t">KIKI</div><div class="s">The skateboard champion of Lagos.</div><span class="tag">SATURDAY AM</span></div>
@@ -100,10 +103,10 @@
       <div class="k">CULTURE · MUSIC · STYLE</div>
       <h2>The Emerald Marina Collection</h2>
       <p>Waitlist-only couture from the house of VERTANGE. Join the list and be first when the next drop opens.</p>
-      <button class="btn">Join the waitlist</button>
+      <a class="btn" href="https://vertangetv.com/marina">Join the waitlist</a>
     </div>
     <h3 class="sec">THE MAGAZINE</h3>
-    <div class="card"><div class="t">VERTANGE ENTERTAINMENT USA</div><div class="s">The First AI Entertainment Magazine — free, numbered issues, new every Friday.</div><span class="tag">READ FREE</span></div>
+    <div class="card" data-go="https://vertangetv.com/magazine"><div class="t">VERTANGE ENTERTAINMENT USA</div><div class="s">The First AI Entertainment Magazine — free, numbered issues, new every Friday.</div><span class="tag">READ FREE</span></div>
   </section>
 </main>
 <nav>
@@ -119,6 +122,15 @@ document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()
   b.classList.add('on'); document.getElementById(b.dataset.t).classList.add('active');
   window.scrollTo(0,0);
 }));
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>{location.href=c.dataset.go||'https://vertangetv.com';}));
+document.querySelectorAll('.bell').forEach((b,i)=>{
+  const k='vertange-bell-'+i;
+  try{if(localStorage.getItem(k)==='1')b.classList.add('on');}catch(e){}
+  b.addEventListener('click',()=>{
+    b.classList.toggle('on');
+    try{localStorage.setItem(k,b.classList.contains('on')?'1':'0');}catch(e){}
+  });
+});
 </script>
 </body>
 </html>
