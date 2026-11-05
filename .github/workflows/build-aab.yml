@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Sync Capacitor Android project
+        run: npx cap sync android
+
       - name: Restore upload keystore
         run: |
           echo "${{ secrets.UPLOAD_KEYSTORE_BASE64 }}" | base64 -d > upload-keystore.jks
