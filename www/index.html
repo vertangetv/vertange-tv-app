@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VERTANGE TV</title>
+<link rel="icon" type="image/png" href="app-icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+  :root{--bg:#07090F;--panel:#0D1120;--gold:#FFD94D;--gold2:#C9A227;--ink:#F5F1E6;--dim:#9AA3B2}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,sans-serif;padding-bottom:84px}
+  header{position:sticky;top:0;background:rgba(7,9,15,.92);backdrop-filter:blur(8px);padding:14px 16px 10px;border-bottom:1px solid #1c2338;z-index:5}
+  .brand{display:flex;align-items:center;gap:10px}
+  .vm{width:38px;height:38px;border:2px solid var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:900;font-size:15px}
+  .brand h1{font-size:20px;letter-spacing:1px}
+  .brand h1 span{color:var(--gold)}
+  .onair{margin-left:auto;background:#B3001B;color:#fff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;letter-spacing:1px}
+  main{padding:16px}
+  .tab{display:none}.tab.active{display:block}
+  .hero{background:linear-gradient(160deg,#141B33,#0A0F1E);border:1px solid var(--gold2);border-radius:16px;padding:18px;margin-bottom:18px}
+  .hero .k{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2px}
+  .hero h2{font-size:24px;margin:8px 0 6px;line-height:1.15}
+  .hero p{color:var(--dim);font-size:14px;line-height:1.45}
+  .btn{display:inline-block;margin-top:14px;background:var(--gold);color:#111;font-weight:800;padding:11px 20px;border-radius:999px;font-size:14px;border:0}
+  h3.sec{font-size:13px;letter-spacing:2px;color:var(--gold);margin:20px 0 10px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .card{background:var(--panel);border:1px solid #1E2742;border-radius:14px;padding:14px;min-height:96px}
+  .card .t{font-weight:800;font-size:15px;line-height:1.25}
+  .card .s{color:var(--dim);font-size:12px;margin-top:5px;line-height:1.4}
+  .card .tag{display:inline-block;margin-top:9px;font-size:10px;font-weight:800;color:#111;background:var(--gold);padding:3px 8px;border-radius:999px;letter-spacing:.5px}
+  .row{display:flex;justify-content:space-between;align-items:center;background:var(--panel);border:1px solid #1E2742;border-radius:12px;padding:13px 14px;margin-bottom:9px}
+  .row .d{font-weight:800;color:var(--gold);font-size:12px;letter-spacing:1px}
+  .row .w{font-size:14px;font-weight:600}
+  .bell{font-size:17px;background:none;border:0;color:var(--gold)}
+  nav{position:fixed;left:0;right:0;bottom:0;background:#0A0E1A;border-top:1px solid #1c2338;display:flex;z-index:5}
+  nav button{flex:1;background:none;border:0;color:var(--dim);padding:10px 0 14px;font-size:11px;font-weight:700;letter-spacing:.5px}
+  nav button.on{color:var(--gold)}
+  nav button i{display:block;font-size:20px;font-style:normal;margin-bottom:3px}
+  .note{color:var(--dim);font-size:13px;line-height:1.55}
+  a{color:var(--gold)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="vm">VM</div>
+    <h1>VERTANGE <span>TV</span></h1>
+    <div class="onair">ON AIR</div>
+  </div>
+</header>
+<main>
+  <!-- WATCH -->
+  <section id="watch" class="tab active">
+    <div class="hero">
+      <div class="k">LATEST PREMIERE · @vertangetv</div>
+      <h2>YORUBA PROVERBS — Ep. 1: The Tree That Will Not Fall</h2>
+      <p>Baba Abati, the blind storyteller of the iroko tree, teaches the young ones: grow deep before you grow tall.</p>
+      <button class="btn">▶ Watch now</button>
+    </div>
+    <h3 class="sec">THE NETWORK</h3>
+    <div class="grid">
+      <div class="card"><div class="t">TOP 10 — Nigeria · USA · UK</div><div class="s">ERIN &amp; XHANGI count down the real charts.</div><span class="tag">FRIDAYS</span></div>
+      <div class="card"><div class="t">KOKO</div><div class="s">Football reviews, UCL nights, Updates &amp; Rumors.</div><span class="tag">ALL WEEK</span></div>
+      <div class="card"><div class="t">THE BIBLE STORIES</div><div class="s">Cinema tellings, one story, one lesson.</div><span class="tag">WEDNESDAYS</span></div>
+      <div class="card"><div class="t">KIKI</div><div class="s">The skateboard champion of Lagos.</div><span class="tag">SATURDAY AM</span></div>
+      <div class="card"><div class="t">OMI TITUN</div><div class="s">The Yoruba river-kingdoms saga.</div><span class="tag">SAT MIDNIGHT</span></div>
+      <div class="card"><div class="t">YORUBA PROVERBS</div><div class="s">Baba Abati's words of wisdom.</div><span class="tag">NEW</span></div>
+    </div>
+  </section>
+  <!-- SCHEDULE -->
+  <section id="sched" class="tab">
+    <h3 class="sec">WEEKLY GRID</h3>
+    <div class="row"><div><div class="d">MON</div><div class="w">KOKO Weekend Review + Football Book</div></div><button class="bell">🔔</button></div>
+    <div class="row"><div><div class="d">TUE</div><div class="w">KOKO UCL Preview · Bible Stories build</div></div><button class="bell">🔔</button></div>
+    <div class="row"><div><div class="d">WED</div><div class="w">THE BIBLE STORIES premiere</div></div><button class="bell">🔔</button></div>
+    <div class="row"><div><div class="d">THU</div><div class="w">Studio day — Top 10 build</div></div><button class="bell">🔔</button></div>
+    <div class="row"><div><div class="d">FRI</div><div class="w">TOP TEN DAY · Magazine drop</div></div><button class="bell">🔔</button></div>
+    <div class="row"><div><div class="d">SAT</div><div class="w">KIKI (am) · OMI TITUN (midnight)</div></div><button class="bell">🔔</button></div>
+    <div class="row"><div><div class="d">SUN</div><div class="w">KOKO Matchday</div></div><button class="bell">🔔</button></div>
+    <p class="note">Tap 🔔 and premiere alerts land on your phone the moment a show drops.</p>
+  </section>
+  <!-- LIBRARY -->
+  <section id="lib" class="tab">
+    <h3 class="sec">LIBRARY</h3>
+    <div class="grid">
+      <div class="card"><div class="t">HOUSE ON FIRE!</div><div class="s">KOKO · UCL MD3 Reaction</div></div>
+      <div class="card"><div class="t">DANIEL IN THE LIONS' DEN</div><div class="s">Bible Stories · Ep. 3</div></div>
+      <div class="card"><div class="t">GOALS RAIN!</div><div class="s">KOKO · UCL MD3 Analysis</div></div>
+      <div class="card"><div class="t">KIKI — RIO FILM</div><div class="s">Kiki · Ep. 4</div></div>
+      <div class="card"><div class="t">THE TREE THAT WILL NOT FALL</div><div class="s">Yoruba Proverbs · Ep. 1</div></div>
+      <div class="card"><div class="t">3 BIBLE STORIES</div><div class="s">The trilogy compilation</div></div>
+    </div>
+    <p class="note" style="margin-top:14px">Full library also lives at <a href="https://vertangetv.com">vertangetv.com</a>.</p>
+  </section>
+  <!-- SHOP -->
+  <section id="shop" class="tab">
+    <h3 class="sec">VERTANGE COUTURE</h3>
+    <div class="hero">
+      <div class="k">CULTURE · MUSIC · STYLE</div>
+      <h2>The Emerald Marina Collection</h2>
+      <p>Waitlist-only couture from the house of VERTANGE. Join the list and be first when the next drop opens.</p>
+      <button class="btn">Join the waitlist</button>
+    </div>
+    <h3 class="sec">THE MAGAZINE</h3>
+    <div class="card"><div class="t">VERTANGE ENTERTAINMENT USA</div><div class="s">The First AI Entertainment Magazine — free, numbered issues, new every Friday.</div><span class="tag">READ FREE</span></div>
+  </section>
+</main>
+<nav>
+  <button class="on" data-t="watch"><i>▶️</i>WATCH</button>
+  <button data-t="sched"><i>🗓️</i>SCHEDULE</button>
+  <button data-t="lib"><i>🎬</i>LIBRARY</button>
+  <button data-t="shop"><i>🛍️</i>SHOP</button>
+</nav>
+<script>
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('nav button').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  b.classList.add('on'); document.getElementById(b.dataset.t).classList.add('active');
+  window.scrollTo(0,0);
+}));
+</script>
+</body>
+</html>
